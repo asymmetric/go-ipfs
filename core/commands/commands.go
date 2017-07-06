@@ -37,7 +37,7 @@ func CommandsCmd(root *cmds.Command) *cmds.Command {
 			ShortDescription: `Lists all available commands (and subcommands) and exits.`,
 		},
 		Options: []cmds.Option{
-			cmds.BoolOption(flagsOptionName, "f", "Show command flags").Default(false),
+			cmds.BoolOption(flagsOptionName, "f", "Show command flags"),
 		},
 		Run: func(req cmds.Request, res cmds.Response) {
 			rootCmd := cmd2outputCmd("ipfs", root)

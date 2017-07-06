@@ -260,7 +260,7 @@ var swarmAddrsLocalCmd = &cmds.Command{
 `,
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("id", "Show peer ID in addresses.").Default(false),
+		cmds.BoolOption("id", "Show peer ID in addresses."),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
 

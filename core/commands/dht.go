@@ -50,7 +50,7 @@ var queryDhtCmd = &cmds.Command{
 		cmds.StringArg("peerID", true, true, "The peerID to run the query against."),
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("verbose", "v", "Print extra information.").Default(false),
+		cmds.BoolOption("verbose", "v", "Print extra information."),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
 		n, err := req.InvocContext().GetNode()
@@ -144,7 +144,7 @@ var findProvidersDhtCmd = &cmds.Command{
 		cmds.StringArg("key", true, true, "The key to find providers for."),
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("verbose", "v", "Print extra information.").Default(false),
+		cmds.BoolOption("verbose", "v", "Print extra information."),
 		cmds.IntOption("num-providers", "n", "The number of providers to find.").Default(20),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
@@ -259,8 +259,8 @@ var provideRefDhtCmd = &cmds.Command{
 		cmds.StringArg("key", true, true, "The key[s] to send provide records for.").EnableStdin(),
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("verbose", "v", "Print extra information.").Default(false),
-		cmds.BoolOption("recursive", "r", "Recursively provide entire graph.").Default(false),
+		cmds.BoolOption("verbose", "v", "Print extra information."),
+		cmds.BoolOption("recursive", "r", "Recursively provide entire graph."),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
 		n, err := req.InvocContext().GetNode()
@@ -410,7 +410,7 @@ var findPeerDhtCmd = &cmds.Command{
 		cmds.StringArg("peerID", true, true, "The ID of the peer to search for."),
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("verbose", "v", "Print extra information.").Default(false),
+		cmds.BoolOption("verbose", "v", "Print extra information."),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
 		n, err := req.InvocContext().GetNode()
@@ -517,7 +517,7 @@ Different key types can specify other 'best' rules.
 		cmds.StringArg("key", true, true, "The key to find a value for."),
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("verbose", "v", "Print extra information.").Default(false),
+		cmds.BoolOption("verbose", "v", "Print extra information."),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
 		n, err := req.InvocContext().GetNode()
@@ -635,7 +635,7 @@ NOTE: A value may not exceed 2048 bytes.
 		cmds.StringArg("value", true, false, "The value to store.").EnableStdin(),
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("verbose", "v", "Print extra information.").Default(false),
+		cmds.BoolOption("verbose", "v", "Print extra information."),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
 		n, err := req.InvocContext().GetNode()

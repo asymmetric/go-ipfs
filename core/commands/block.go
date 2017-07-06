@@ -243,8 +243,8 @@ It takes a list of base58 encoded multihashs to remove.
 		cmds.StringArg("hash", true, true, "Bash58 encoded multihash of block(s) to remove."),
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("force", "f", "Ignore nonexistent blocks.").Default(false),
-		cmds.BoolOption("quiet", "q", "Write minimal output.").Default(false),
+		cmds.BoolOption("force", "f", "Ignore nonexistent blocks."),
+		cmds.BoolOption("quiet", "q", "Write minimal output."),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
 		n, err := req.InvocContext().GetNode()

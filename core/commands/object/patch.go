@@ -265,7 +265,7 @@ to a file containing 'bar', and returns the hash of the new object.
 		cmds.StringArg("ref", true, false, "IPFS object to add link to."),
 	},
 	Options: []cmds.Option{
-		cmds.BoolOption("create", "p", "Create intermediary nodes.").Default(false),
+		cmds.BoolOption("create", "p", "Create intermediary nodes."),
 	},
 	Run: func(req cmds.Request, res cmds.Response) {
 		nd, err := req.InvocContext().GetNode()

@@ -10,6 +10,7 @@ import (
 	"strings"
 
 	context "context"
+
 	assets "github.com/ipfs/go-ipfs/assets"
 	cmds "github.com/ipfs/go-ipfs/commands"
 	core "github.com/ipfs/go-ipfs/core"
@@ -47,7 +48,7 @@ environment variable:
 	},
 	Options: []cmds.Option{
 		cmds.IntOption("bits", "b", "Number of bits to use in the generated RSA private key.").Default(nBitsForKeypairDefault),
-		cmds.BoolOption("empty-repo", "e", "Don't add and pin help files to the local storage.").Default(false),
+		cmds.BoolOption("empty-repo", "e", "Don't add and pin help files to the local storage."),
 		cmds.StringOption("profile", "p", "Apply profile settings to config. Multiple profiles can be separated by ','"),
 
 		// TODO need to decide whether to expose the override as a file or a
